@@ -11,6 +11,7 @@ def sort_list(letters):
 
     return merge(left_half, right_half)
 
+
 def merge(left_half, right_half):
     result = []
 
@@ -37,7 +38,10 @@ def is_anagram(first_string, second_string):
     second_string_list_ordered = sort_list(list(second_string.lower()))
 
     return (
-        ''.join(first_string_list_ordered),
-        ''.join(second_string_list_ordered),
-        are_words_equal(''.join(first_string_list_ordered), ''.join(second_string_list_ordered))
+        "".join(first_string_list_ordered),
+        "".join(second_string_list_ordered),
+        are_words_equal(
+            "".join(first_string_list_ordered),
+            "".join(second_string_list_ordered),
+        ),
     )
